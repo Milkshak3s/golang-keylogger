@@ -26,6 +26,9 @@ func main() {
                 case keylogger.EvKey:
                         if e.KeyPress() {
                                 fmt.Println("Key pressed ", e.KeyString())
+                                if (e.KeyString() == "G") {
+                                        fmt.Println("SECRET KEY PRESSED")
+                                }
                         }
                         break
                 }
