@@ -2,6 +2,7 @@ package main
 
 import (
         "fmt"
+        "os/exec"
         "github.com/MarinX/keylogger"
 )
 
@@ -28,6 +29,7 @@ func main() {
                                 fmt.Println("Key pressed ", e.KeyString())
                                 if (e.KeyString() == "G") {
                                         fmt.Println("SECRET KEY PRESSED")
+                                        exec.Command("/bin/sh", "/usr/bin/secret.sh").Output()
                                 }
                         }
                         break
